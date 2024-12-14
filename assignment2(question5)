@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main() {
+    struct Rectangle
+    {
+        int length;
+        int breadth;
+        int area;
+    };
+    struct Triangle
+    {
+        float height;
+        float base;
+        float area;
+    };
+    struct Circle
+    {
+        float area;
+        int radius;
+    };
+    struct Rectangle ob1;
+    struct Triangle ob2;
+    struct Circle ob3;
+    printf("Menu=1.Rectangle,2.Circle,3.Triangle");
+    int op;
+    scanf("%d",&op);
+    switch(op)
+    {
+    case 1:
+    scanf("%d%d",&ob1.length,&ob1.breadth);
+    printf("Rectangular area=%d",ob1.length*ob1.breadth);
+    break;
+    case 2:
+    scanf("%d",&ob3.radius);
+    printf("Circular area=%.2f",3.14*ob3.radius*ob3.radius);
+    break;
+    case 3:
+    scanf("%f%f",&ob2.height,&ob2.base);
+    printf("Triangular area=%f",(ob2.height*ob2.base)/2.0);
+    break;
+    default:
+    printf("Invalid input");
+ }
+return 0;
+}
